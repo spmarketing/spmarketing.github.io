@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Furniture Website</title>
+    <!-- LInk To CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Box Icons -->
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <a href="#" class="logo"><span>SP </span> Marketing</a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <ul class="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#chair-store">Chairs</a></li>
+            <li><a href="#sofa-store">Sofas</a></li>
+            <li><a href="#table-store">Tables</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </header>
+    <!-- Home -->
+    <section class="home" id="home">
+        <div class="home-text">
+            <h1><Span>Your</Span> Comfort <br> Is Our <span>Happiness</span></h1>
+            <p></p>
+            <a href="#contact" class="btn">Contact us</a>
+            <a href="#chair-store" class="btn">See products</a>
+        </div>
+    </section>
+    <section class="shop" id="chair-store">
+        <div class="heading">
+            <span>New Arrival</span>
+            <h2>Chairs</h2>
+        </div>
+        <div class="new-container" id="chairs">
+        </div>
+    </section>
+    <!-- Sofas -->
+    <section class="shop" id="sofa-store">
+        <div class="heading">
+            <span>New Collection</span>
+            <h2>Sofas</h2>
+        </div>
+        <!-- Content -->
+        <div class="new-container" id="sofas">
+            <!-- Box 1 -->
+        </div>
+    </section>
+    <!-- Tables -->
+    <section class="shop" id="table-store">
+        <div class="heading">
+            <span>New Collection</span>
+            <h2>Tables</h2>
+        </div>
+        <!-- Content -->
+        <div class="new-container" id="tables">
+            <!-- Box 1 -->
+        </div>
+    </section>
+
+    <section class="newsletter" id="contact">
+        <h2 style="color: greenyellow;">+91 8143999555</h2>
+        <!-- <div class="news-box">
+            <input type="text" placeholder="Enter Your Email...">
+            <a href="#" class="btn">Subscribe</a>
+        </div> -->
+    </section>
+    <!-- Footer -->
+    <section class="footer" id="footer">
+        <div class="footer-box">
+            <h2><span>SP</span> Marketing</h2>
+            <p>One stop for all your furniture needs..</p>
+            <div class="social">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+            </div>
+        </div>
+        <!-- <div class="footer-box">
+            <h3>Services</h3>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Help & Support</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">FAQ</a></li>
+        </div>
+        <div class="footer-box">
+            <h3>Product</h3>
+            <li><a href="#">Sofa's</a></li>
+            <li><a href="#">Chair's</a></li>
+            <li><a href="#">Living Room</a></li>
+            <li><a href="#">Office</a></li>
+        </div> -->
+        <div class="footer-box contact-info">
+            <h3>Contact</h3>
+            <span>Kadiri, College Circle, 515591</span>
+            <span>+91 8143999555</span>
+            <span>spmarketing555@gmail.com</span>
+            
+        </div>
+    </section>
+    <div class="copyright">
+        <p>SP Marketing <br> Copyright &#169; 2022  All Rights Reserved.</p>
+    </div>
+    <!-- Link To JS -->
+    <script src="main.js"></script>
+    <script>
+        function display() {
+            var chairs = document.getElementById('chairs')
+            var n_chairs = 9;
+            var chairs_items = ''
+            for(var i=1;i<=n_chairs;i++) {
+                var chair_img_url = 'img/chairs/'+i+'.jpg'
+                const chair_item = `
+                <a href="${chair_img_url}">
+                <div class="box">
+                    <div class="box-img">
+                        <img src="${chair_img_url}" alt="">
+                    </div>
+                </div>
+                </a>
+                `
+                
+            chairs_items += chair_item
+            }
+            chairs.innerHTML = chairs_items
+
+            var sofas = document.getElementById('sofas')
+            var n_sofas = 6;
+            var sofas_items = ''
+            for(var i=1;i<=n_sofas;i++) {
+                var sofa_img_url = 'img/sofas/'+i+'.jpg'
+                const sofa_item = `
+                <a href="${sofa_img_url}">
+                <div class="box">
+                    <div class="box-img">
+                        <img src="${sofa_img_url}" alt="">
+                    </div>
+                </div>
+            </a>
+                `
+                sofas_items += sofa_item
+            }
+            sofas.innerHTML = sofas_items
+
+            var tables = document.getElementById('tables')
+            var n_tables = 5;
+            var tables_items = ''
+            for(var i=1;i<=n_tables;i++) {
+                var table_img_url = 'img/tables/'+i+'.jpg'
+                const table_item = `
+                <a href="${table_img_url}">
+                <div class="box">
+                    <div class="box-img">
+                        <img src="${table_img_url}" alt="">
+                    </div>
+                </div>
+            </a>
+                `
+                tables_items += table_item
+            }
+            tables.innerHTML = tables_items
+
+
+            
+
+            
+        }
+        display()
+    </script>
+</body>
+</html>
